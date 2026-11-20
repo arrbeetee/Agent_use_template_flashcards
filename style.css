@@ -19,6 +19,12 @@ h1 {
   color: #245b8f;
 }
 
+h2 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #245b8f;
+}
+
 form {
   display: grid;
   gap: 0.75rem;
@@ -44,4 +50,10 @@ button {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#word-pair-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.8;
 }

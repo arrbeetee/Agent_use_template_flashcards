@@ -1,4 +1,4 @@
 Flash Card Website
 
 # Usage :
-Öffne index.html im Broser oder im VSCode preview.
+Öffne index.html im Browser oder im VSCode preview.
