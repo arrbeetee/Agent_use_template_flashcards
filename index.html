@@ -8,5 +8,18 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <main>
+      <h1>Vokabelkarten</h1>
+      <form id="word-pair-form">
+        <label for="english-word">Englisch</label>
+        <input id="english-word" name="english" type="text" required>
+
+        <label for="german-word">Deutsch</label>
+        <input id="german-word" name="german" type="text" required>
+
+        <p id="form-error" role="alert" hidden></p>
+        <button type="submit">OK</button>
+      </form>
+    </main>
   </body>
 </html>
