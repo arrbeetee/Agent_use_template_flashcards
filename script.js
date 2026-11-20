@@ -5,10 +5,13 @@ const practiceEnglish = document.querySelector("#practice-english");
 const practiceGerman = document.querySelector("#practice-german");
 const practiceEmpty = document.querySelector("#practice-empty");
 const revealButton = document.querySelector("#reveal-button");
+const knownButton = document.querySelector("#known-button");
+const knownCount = document.querySelector("#known-count");
 const nextButton = document.querySelector("#next-button");
 const storageKey = "wordPairs";
 let wordPairs = loadWordPairs();
 let currentCardIndex = 0;
+let knownCardsCount = 0;
 
 // Loads saved word pairs from localStorage when the page starts.
 function loadWordPairs() {
@@ -100,6 +103,7 @@ function renderPracticeCard() {
     practiceGerman.textContent = "";
     practiceEmpty.hidden = false;
     revealButton.hidden = true;
+    knownButton.hidden = true;
     nextButton.hidden = true;
     return;
   }
@@ -112,7 +116,14 @@ function renderPracticeCard() {
   practiceGerman.textContent = wordPairs[currentCardIndex].german;
   practiceEmpty.hidden = true;
   revealButton.hidden = false;
+  knownButton.hidden = false;
   nextButton.hidden = false;
+}
+
+// Adds one to the number of cards marked as known this session.
+function markCardKnown() {
+  knownCardsCount = knownCardsCount + 1;
+  knownCount.textContent = "In dieser Sitzung gewusst: " + knownCardsCount;
 }
 
 // Reveals the German translation for the displayed English word.
@@ -140,6 +151,7 @@ function showNextCard() {
 
 wordPairForm.addEventListener("submit", addWordPair);
 revealButton.addEventListener("click", revealGermanWord);
+knownButton.addEventListener("click", markCardKnown);
 nextButton.addEventListener("click", showNextCard);
 renderWordPairs();
 renderPracticeCard();

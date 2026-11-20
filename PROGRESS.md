@@ -7,9 +7,9 @@
 - F4: Wortpaare werden in localStorage gespeichert und nach einem Seitenreload wieder geladen.
 - F5: Der Übungsmodus zeigt das erste gespeicherte englische Wort und enthüllt die deutsche Übersetzung durch einen Klick auf den Anzeigen-Button.
 - F6: Der Nächste-Button zeigt bei mindestens zwei Karten zufällig eine Karte, die nicht die aktuelle Karte ist.
+- F7: Der Button „Das wusste ich!“ erhöht einen Sitzungszähler, der nach dem Neuladen der Seite wieder bei null beginnt.
 
 ## Next
-- F7: Die Anzahl der Karten, die in der Sitzung als gewusst markiert wurden, wird gezählt.
 
 ## Decisions & notes
 
