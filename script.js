@@ -7,11 +7,29 @@ const wordPairs = [];
 function renderWordPairs() {
   wordPairList.innerHTML = "";
 
-  for (const wordPair of wordPairs) {
+  for (let index = 0; index < wordPairs.length; index++) {
+    const wordPair = wordPairs[index];
     const listItem = document.createElement("li");
-    listItem.textContent = wordPair.english + " - " + wordPair.german;
+    const wordPairText = document.createElement("span");
+    const deleteButton = document.createElement("button");
+
+    wordPairText.textContent = wordPair.english + " - " + wordPair.german;
+    deleteButton.textContent = "Löschen";
+    deleteButton.className = "delete-button";
+    deleteButton.addEventListener("click", function () {
+      deleteWordPair(index);
+    });
+
+    listItem.appendChild(wordPairText);
+    listItem.appendChild(deleteButton);
     wordPairList.appendChild(listItem);
   }
+}
+
+// Deletes the word pair at the selected list position.
+function deleteWordPair(index) {
+  wordPairs.splice(index, 1);
+  renderWordPairs();
 }
 
 // Adds a word pair to the current page session and clears the form.

@@ -57,3 +57,18 @@ button {
   padding-left: 1.25rem;
   line-height: 1.8;
 }
+
+#word-pair-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#word-pair-list .delete-button {
+  width: auto;
+  margin-top: 0;
+  padding: 0.4rem 0.75rem;
+  background-color: #a43d3d;
+}
