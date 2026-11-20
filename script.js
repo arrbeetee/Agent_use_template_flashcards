@@ -5,8 +5,10 @@ const practiceEnglish = document.querySelector("#practice-english");
 const practiceGerman = document.querySelector("#practice-german");
 const practiceEmpty = document.querySelector("#practice-empty");
 const revealButton = document.querySelector("#reveal-button");
+const nextButton = document.querySelector("#next-button");
 const storageKey = "wordPairs";
 let wordPairs = loadWordPairs();
+let currentCardIndex = 0;
 
 // Loads saved word pairs from localStorage when the page starts.
 function loadWordPairs() {
@@ -50,6 +52,19 @@ function renderWordPairs() {
 // Deletes the word pair at the selected list position.
 function deleteWordPair(index) {
   wordPairs.splice(index, 1);
+
+  if (index < currentCardIndex) {
+    currentCardIndex = currentCardIndex - 1;
+  } else if (index === currentCardIndex) {
+    if (currentCardIndex >= wordPairs.length) {
+      currentCardIndex = wordPairs.length - 1;
+    }
+  }
+
+  if (currentCardIndex < 0) {
+    currentCardIndex = 0;
+  }
+
   saveWordPairs();
   renderWordPairs();
   renderPracticeCard();
@@ -85,13 +100,19 @@ function renderPracticeCard() {
     practiceGerman.textContent = "";
     practiceEmpty.hidden = false;
     revealButton.hidden = true;
+    nextButton.hidden = true;
     return;
   }
 
-  practiceEnglish.textContent = wordPairs[0].english;
-  practiceGerman.textContent = wordPairs[0].german;
+  if (currentCardIndex >= wordPairs.length) {
+    currentCardIndex = 0;
+  }
+
+  practiceEnglish.textContent = wordPairs[currentCardIndex].english;
+  practiceGerman.textContent = wordPairs[currentCardIndex].german;
   practiceEmpty.hidden = true;
   revealButton.hidden = false;
+  nextButton.hidden = false;
 }
 
 // Reveals the German translation for the displayed English word.
@@ -101,7 +122,24 @@ function revealGermanWord() {
   }
 }
 
+// Shows a random card that is different from the current card.
+function showNextCard() {
+  if (wordPairs.length < 2) {
+    return;
+  }
+
+  let nextCardIndex = currentCardIndex;
+
+  while (nextCardIndex === currentCardIndex) {
+    nextCardIndex = Math.floor(Math.random() * wordPairs.length);
+  }
+
+  currentCardIndex = nextCardIndex;
+  renderPracticeCard();
+}
+
 wordPairForm.addEventListener("submit", addWordPair);
 revealButton.addEventListener("click", revealGermanWord);
+nextButton.addEventListener("click", showNextCard);
 renderWordPairs();
 renderPracticeCard();
