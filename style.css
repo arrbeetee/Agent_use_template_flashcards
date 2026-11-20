@@ -72,3 +72,23 @@ button {
   padding: 0.4rem 0.75rem;
   background-color: #a43d3d;
 }
+
+#practice-section {
+  min-height: 180px;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #edf3f8;
+  border: 1px solid #c7d3df;
+  border-radius: 6px;
+}
+
+#practice-english,
+#practice-german {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+#practice-german {
+  color: #245b8f;
+  font-weight: bold;
+}

@@ -1,6 +1,10 @@
 const wordPairForm = document.querySelector("#word-pair-form");
 const formError = document.querySelector("#form-error");
 const wordPairList = document.querySelector("#word-pair-list");
+const practiceEnglish = document.querySelector("#practice-english");
+const practiceGerman = document.querySelector("#practice-german");
+const practiceEmpty = document.querySelector("#practice-empty");
+const revealButton = document.querySelector("#reveal-button");
 const storageKey = "wordPairs";
 let wordPairs = loadWordPairs();
 
@@ -48,6 +52,7 @@ function deleteWordPair(index) {
   wordPairs.splice(index, 1);
   saveWordPairs();
   renderWordPairs();
+  renderPracticeCard();
 }
 
 // Adds a word pair to the current page session and clears the form.
@@ -68,7 +73,35 @@ function addWordPair(event) {
   formError.hidden = true;
   wordPairForm.reset();
   renderWordPairs();
+  renderPracticeCard();
+}
+
+// Displays the first saved word pair or an empty-state message.
+function renderPracticeCard() {
+  practiceGerman.hidden = true;
+
+  if (wordPairs.length === 0) {
+    practiceEnglish.textContent = "";
+    practiceGerman.textContent = "";
+    practiceEmpty.hidden = false;
+    revealButton.hidden = true;
+    return;
+  }
+
+  practiceEnglish.textContent = wordPairs[0].english;
+  practiceGerman.textContent = wordPairs[0].german;
+  practiceEmpty.hidden = true;
+  revealButton.hidden = false;
+}
+
+// Reveals the German translation for the displayed English word.
+function revealGermanWord() {
+  if (wordPairs.length > 0) {
+    practiceGerman.hidden = false;
+  }
 }
 
 wordPairForm.addEventListener("submit", addWordPair);
+revealButton.addEventListener("click", revealGermanWord);
 renderWordPairs();
+renderPracticeCard();

@@ -5,9 +5,11 @@
 - F2: Gespeicherte Wortpaare werden in einer Liste unter dem Formular angezeigt.
 - F3: Jedes Wortpaar hat einen Löschen-Button; beim Klick wird nur der ausgewählte Eintrag entfernt und die Liste neu dargestellt.
 - F4: Wortpaare werden in localStorage gespeichert und nach einem Seitenreload wieder geladen.
+- F5: Der Übungsmodus zeigt das erste gespeicherte englische Wort und enthüllt die deutsche Übersetzung durch einen Klick auf den Anzeigen-Button.
 
 ## Next
-- F5: Übungsmodus mit einem englischen Wort und Button zum Anzeigen der deutschen Übersetzung.
+- F6: Der Nächste-Button zeigt ein zufälliges anderes Kartenpaar.
+- F7: Die Anzahl der Karten, die in der Sitzung als gewusst markiert wurden, wird gezählt.
 
 ## Decisions & notes
 
