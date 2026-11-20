@@ -1,7 +1,24 @@
 const wordPairForm = document.querySelector("#word-pair-form");
 const formError = document.querySelector("#form-error");
 const wordPairList = document.querySelector("#word-pair-list");
-const wordPairs = [];
+const storageKey = "wordPairs";
+let wordPairs = loadWordPairs();
+
+// Loads saved word pairs from localStorage when the page starts.
+function loadWordPairs() {
+  const savedWordPairs = localStorage.getItem(storageKey);
+
+  if (savedWordPairs === null) {
+    return [];
+  }
+
+  return JSON.parse(savedWordPairs);
+}
+
+// Saves the current word pairs to localStorage.
+function saveWordPairs() {
+  localStorage.setItem(storageKey, JSON.stringify(wordPairs));
+}
 
 // Displays every saved word pair in the list.
 function renderWordPairs() {
@@ -29,6 +46,7 @@ function renderWordPairs() {
 // Deletes the word pair at the selected list position.
 function deleteWordPair(index) {
   wordPairs.splice(index, 1);
+  saveWordPairs();
   renderWordPairs();
 }
 
@@ -46,9 +64,11 @@ function addWordPair(event) {
   }
 
   wordPairs.push({ english: englishWord, german: germanWord });
+  saveWordPairs();
   formError.hidden = true;
   wordPairForm.reset();
   renderWordPairs();
 }
 
 wordPairForm.addEventListener("submit", addWordPair);
+renderWordPairs();
