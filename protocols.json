@@ -1,0 +1,155 @@
+[
+  {
+    "id": "thorax-pa-stehend",
+    "untersuchung": "Thorax p.a. (stehend)",
+    "modalitaet": "Röntgen",
+    "region": "Thorax",
+    "parameter": {
+      "kv": "115-125 kV",
+      "mas": "ca. 1,0-5,0 mAs (AEC)",
+      "fda": "150-200 cm"
+    },
+    "lagerung": "Stehend am Rasterwandstativ, Brust vorne am Detektor, Hände in die Hüften und Ellenbogen nach vorne ziehen, tiefe Inspiration.",
+    "cave": [
+      "Rotationsfehler vermeiden (Schultern gerade und symmetrisch ausrichten).",
+      "Lungenspitzen und beide Sinus phrenicocostales vollständig abbilden.",
+      "Ungenügende Inspiration täuscht Herzgröße und verstärkte Gefäßzeichnung vor."
+    ]
+  },
+  {
+    "id": "schulter-ap",
+    "untersuchung": "Schulter a.p.",
+    "modalitaet": "Röntgen",
+    "region": "Obere Extremität",
+    "parameter": {
+      "kv": "60-70 kV",
+      "mas": "ca. 10-18 mAs (AEC)",
+      "fda": "100-115 cm"
+    },
+    "lagerung": "Stehend oder sitzend am Rasterwandstativ, leichte Aufdrehung der betroffenen Seite (ca. 5-10°), Arm je nach Fragestellung in Neutral-, Innen- oder Außenrotation.",
+    "cave": [
+      "Rotationsstellung genau an Fragestellung anpassen (Daumen außen/vorne vs. innen).",
+      "Zu starke Drehung verfälscht den Gelenkspalt.",
+      "Gelenkerguss kann eine Pseudoluxation nach kaudal vortäuschen."
+    ]
+  },
+  {
+    "id": "schulter-outlet-view",
+    "untersuchung": "Schulter Outlet View (Y-Aufnahme)",
+    "modalitaet": "Röntgen",
+    "region": "Obere Extremität",
+    "parameter": {
+      "kv": "65-75 kV",
+      "mas": "ca. 12-18 mAs (AEC)",
+      "fda": "115 cm"
+    },
+    "lagerung": "Stehend am Rasterwandstativ, betroffene Schulter am Detektor, gesunde Seite ca. 45-60° vom Stativ wegdrehen, bis die Skapula orthograd getroffen wird; Röhre ca. 15-20° craniocaudal geneigt.",
+    "cave": [
+      "Röhre ca. 15-20° craniocaudal neigen, um das Akromion frei zu projizieren.",
+      "Korrekte Rotation beachten (Y-Figur aus Korakoid, Spina scapulae und Skapulablatt).",
+      "Überlagerung durch die Rippen vermeiden."
+    ]
+  },
+  {
+    "id": "kniegelenk-ap",
+    "untersuchung": "Kniegelenk a.p.",
+    "modalitaet": "Röntgen",
+    "region": "Untere Extremität",
+    "parameter": {
+      "kv": "60-65 kV",
+      "mas": "ca. 4-6 mAs (AEC)",
+      "fda": "115 cm"
+    },
+    "lagerung": "Liegend in Rückenlage (oder stehend unter Belastung je nach Fragestellung), Bein gestreckt, Patella zentriert nach vorne ausgerichtet, Zentralstrahl auf den Gelenkspalt (unterhalb der Patellaspitze).",
+    "cave": [
+      "Beinachse und korrekte Rotation beachten (Patella mittig zwischen den Femurkondylen).",
+      "Bein vollständig gestreckt lagern (außer bei schmerzbedingter Beugehemmung).",
+      "Bei Verdacht auf Gonarthrose Aufnahme möglichst im Stehen (belastet) anfertigen."
+    ]
+  },
+  {
+    "id": "kniegelenk-lateral",
+    "untersuchung": "Kniegelenk lateral",
+    "modalitaet": "Röntgen",
+    "region": "Untere Extremität",
+    "parameter": {
+      "kv": "60-65 kV",
+      "mas": "ca. 4-6 mAs (AEC)",
+      "fda": "115 cm"
+    },
+    "lagerung": "Seitenlage auf der betroffenen Seite, Kniegelenk ca. 20-30° gebeugt, kontralaterales Bein nach vorne oder hinten auslagern, Ferse ggf. leicht unterpolstern.",
+    "cave": [
+      "Femurkondylen müssen exakt deckungsgleich projiziert sein.",
+      "Retropatellarer Gelenkspalt frei einsehbar darstellen.",
+      "Bei Trauma-Fragestellung (Lipohämarthros) horizontalen Strahlengang in Rückenlage erwägen."
+    ]
+  },
+  {
+    "id": "patella-tangential",
+    "untersuchung": "Patella tangential (30°/60°)",
+    "modalitaet": "Röntgen",
+    "region": "Untere Extremität",
+    "parameter": {
+      "kv": "60-65 kV",
+      "mas": "ca. 5-8 mAs (frei)",
+      "fda": "115 cm"
+    },
+    "lagerung": "Rückenlage mit angewinkeltem Kniegelenk (ca. 30-45° Beugung über Lagerungskissen), Detektor proximal oberhalb der Patella positioniert, Zentralstrahl tangential durch das Femoropatellargelenk.",
+    "cave": [
+      "Bei bekannter oder dringend vermuteter Patella-Querfraktur hinterfragen, ob Aufnahme notwendig ist (Dislokationsgefahr durch Beugung!).",
+      "Beine entspannt und ohne Außen-/Innenrotation lagern.",
+      "Femoropatellarer Gelenkspalt muss überlagerungsfrei abgebildet sein."
+    ]
+  },
+  {
+    "id": "abdomen-uebersicht-linksseitenlage",
+    "untersuchung": "Abdomen Übersicht (Linksseitenlage)",
+    "modalitaet": "Röntgen",
+    "region": "Abdomen",
+    "parameter": {
+      "kv": "75-85 kV",
+      "mas": "ca. 15-30 mAs (AEC)",
+      "fda": "115 cm"
+    },
+    "lagerung": "Stabile Linksseitenlage auf der Liege vor dem Rasterwandstativ (nach ca. 5-10 Minuten Vorlagerung), horizontaler Strahlengang in Exspiration.",
+    "cave": [
+      "Rechte Flanke und Zwerchfellkuppel vollständig abbilden (Nachweis freier Luft).",
+      "Mindestens 5 Minuten vorher in Linksseitenlage lagern, damit freie Luft aufsteigen kann.",
+      "Symphyse nach Möglichkeit mit erfassen."
+    ]
+  },
+  {
+    "id": "ct-thorax-standard",
+    "untersuchung": "CT Thorax (nativ / KM)",
+    "modalitaet": "CT",
+    "region": "Thorax",
+    "parameter": {
+      "kv": "100-120 kV",
+      "mas": "CareDose / AEC (Ref. ~90-120 mAs)",
+      "fda": "Isozentrum (Gantry)"
+    },
+    "lagerung": "Rückenlage, Head-First, Arme über dem Kopf gelagert, Scanbereich von Lungenspitze bis Nebennieren in tiefer Inspiration.",
+    "cave": [
+      "Vor KM-Gabe Nierenwerte (Kreatinin/eGFR), Schilddrüsenwerte (TSH) und Allergien prüfen.",
+      "Atemkommando vorab üben, um Bewegungsartefakte zu vermeiden.",
+      "Arme konsequent über den Kopf lagern (Aufhärtungsartefakte im Thoraxbereich)."
+    ]
+  },
+  {
+    "id": "mrt-kniegelenk-standard",
+    "untersuchung": "MRT Kniegelenk (Standardprotokoll)",
+    "modalitaet": "MRT",
+    "region": "Untere Extremität",
+    "parameter": {
+      "kv": "1,5 T / 3,0 T (PD fs, T1)",
+      "mas": "Dedizierte Kniespule",
+      "fda": "Isozentrum Magnet"
+    },
+    "lagerung": "Rückenlage, Feet-First, zu untersuchendes Knie mittig in der Kniespule, leichte Außenrotation (ca. 10-15°) für optimale Darstellung des vorderen Kreuzbandes.",
+    "cave": [
+      "Kontraindikationen abklären (Herzschrittmacher, Metallsplitter, Cochlea-Implantate, Schwangerschaft).",
+      "Gehörschutz anlegen und Notfallball in die Hand geben.",
+      "Knie gut abpolstern, um Bewegungsartefakte während der Sequenzen zu verhindern."
+    ]
+  }
+]

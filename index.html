@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiographer Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <p class="eyebrow">Radiographer Companion</p>
+    <h1>Untersuchungsprotokolle</h1>
+    <p>Übersicht der verfügbaren Untersuchungen</p>
+  </header>
+
+  <main class="page-content">
+    <p id="load-status" class="load-status" role="status" aria-live="polite">
+      Protokolle werden geladen …
+    </p>
+    <section id="protocol-list" class="protocol-grid" aria-label="Untersuchungsprotokolle"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
