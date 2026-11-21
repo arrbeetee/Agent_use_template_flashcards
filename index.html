@@ -14,10 +14,23 @@
   </header>
 
   <main class="page-content">
-    <p id="load-status" class="load-status" role="status" aria-live="polite">
-      Protokolle werden geladen …
-    </p>
-    <section id="protocol-list" class="protocol-grid" aria-label="Untersuchungsprotokolle"></section>
+    <div class="page-layout">
+      <aside class="search-panel" aria-label="Protokolle durchsuchen">
+        <label for="protocol-search">Suche</label>
+        <input
+          id="protocol-search"
+          type="search"
+          placeholder="Untersuchung, Lagerung oder CAVE"
+          autocomplete="off"
+        >
+      </aside>
+      <div class="protocol-results">
+        <p id="load-status" class="load-status" role="status" aria-live="polite">
+          Protokolle werden geladen …
+        </p>
+        <section id="protocol-list" class="protocol-grid" aria-label="Untersuchungsprotokolle"></section>
+      </div>
+    </div>
   </main>
 
   <script src="script.js"></script>

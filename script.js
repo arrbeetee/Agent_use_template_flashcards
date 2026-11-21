@@ -1,5 +1,7 @@
 const protocolList = document.getElementById("protocol-list");
 const loadStatus = document.getElementById("load-status");
+const protocolSearch = document.getElementById("protocol-search");
+let allProtocols = [];
 
 // Lädt die Protokolle und zeigt einen Fehler an, falls die Datei nicht lesbar ist.
 async function loadProtocols() {
@@ -10,25 +12,61 @@ async function loadProtocols() {
       throw new Error(`HTTP-Fehler ${response.status}`);
     }
 
-    const protocols = await response.json();
-    if (!Array.isArray(protocols)) {
+    allProtocols = await response.json();
+    if (!Array.isArray(allProtocols)) {
       throw new Error("Die Datei enthält keine Protokollliste.");
     }
 
-    renderProtocols(protocols);
+    renderProtocols(allProtocols);
   } catch (error) {
     loadStatus.textContent = `Protokolle konnten nicht geladen werden: ${error.message}`;
     loadStatus.classList.add("load-status-error");
   }
 }
 
+// Filtert die Protokolle bei jeder Eingabe nach Name, Lagerung und CAVE-Hinweisen.
+function searchProtocols() {
+  const searchText = protocolSearch.value.trim().toLowerCase();
+
+  if (searchText === "") {
+    renderProtocols(allProtocols);
+    return;
+  }
+
+  const matchingProtocols = allProtocols.filter(function (protocol) {
+    const nameOrPosition = [
+      protocol.untersuchung,
+      protocol.lagerung
+    ].join(" ").toLowerCase();
+
+    if (nameOrPosition.includes(searchText)) {
+      return true;
+    }
+
+    return protocol.cave.some(function (hint) {
+      const hintText = hint.toLowerCase();
+      const words = hintText.split(/[^a-zäöüß0-9]+/);
+      return words.includes(searchText) ||
+        (searchText.includes(" ") && hintText.includes(searchText));
+    });
+  });
+
+  renderProtocols(matchingProtocols);
+}
+
 // Erstellt für jedes Protokoll eine Karte in der Übersicht.
 function renderProtocols(protocols) {
+  protocolList.replaceChildren();
+
   for (const protocol of protocols) {
     protocolList.appendChild(createProtocolCard(protocol));
   }
 
-  loadStatus.textContent = `${protocols.length} Untersuchungsprotokolle geladen.`;
+  if (protocolSearch.value.trim() === "") {
+    loadStatus.textContent = `${protocols.length} Untersuchungsprotokolle geladen.`;
+  } else {
+    loadStatus.textContent = `${protocols.length} von ${allProtocols.length} Untersuchungsprotokollen gefunden.`;
+  }
 }
 
 // Erstellt eine Karte mit allen Angaben eines Untersuchungsprotokolls.
@@ -122,4 +160,5 @@ function createCaveSection(caveHints) {
   return section;
 }
 
+protocolSearch.addEventListener("input", searchProtocols);
 loadProtocols();
