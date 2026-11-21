@@ -82,6 +82,42 @@ body {
   outline-offset: 1px;
 }
 
+.filter-group {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-group legend {
+  margin-bottom: 8px;
+  color: #40545c;
+  font-weight: 700;
+}
+
+.filter-button {
+  min-height: 38px;
+  border: 1px solid #aebfc4;
+  border-radius: 5px;
+  color: #40545c;
+  background: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  border-color: #176b73;
+  color: #176b73;
+}
+
+.filter-button.is-active {
+  border-color: #176b73;
+  color: #ffffff;
+  background: #176b73;
+  font-weight: 700;
+}
+
 .protocol-results {
   min-width: 0;
 }

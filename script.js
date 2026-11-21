@@ -1,7 +1,9 @@
 const protocolList = document.getElementById("protocol-list");
 const loadStatus = document.getElementById("load-status");
 const protocolSearch = document.getElementById("protocol-search");
+const modalityButtons = document.querySelectorAll(".filter-button");
 let allProtocols = [];
+let activeModality = "Alle";
 
 // Lädt die Protokolle und zeigt einen Fehler an, falls die Datei nicht lesbar ist.
 async function loadProtocols() {
@@ -24,16 +26,19 @@ async function loadProtocols() {
   }
 }
 
-// Filtert die Protokolle bei jeder Eingabe nach Name, Lagerung und CAVE-Hinweisen.
-function searchProtocols() {
+// Filtert die Protokolle nach Suchtext und aktiver Modalität.
+function filterProtocols() {
   const searchText = protocolSearch.value.trim().toLowerCase();
-
-  if (searchText === "") {
-    renderProtocols(allProtocols);
-    return;
-  }
-
   const matchingProtocols = allProtocols.filter(function (protocol) {
+    if (activeModality !== "Alle" &&
+      protocol.modalitaet !== activeModality) {
+      return false;
+    }
+
+    if (searchText === "") {
+      return true;
+    }
+
     const nameOrPosition = [
       protocol.untersuchung,
       protocol.lagerung
@@ -43,15 +48,22 @@ function searchProtocols() {
       return true;
     }
 
-    return protocol.cave.some(function (hint) {
-      const hintText = hint.toLowerCase();
-      const words = hintText.split(/[^a-zäöüß0-9]+/);
-      return words.includes(searchText) ||
-        (searchText.includes(" ") && hintText.includes(searchText));
-    });
+    return protocol.cave.join(" ").toLowerCase().includes(searchText);
   });
 
   renderProtocols(matchingProtocols);
+}
+
+// Wechselt den aktiven Modalitätsfilter und aktualisiert die Karten.
+function selectModality(event) {
+  const selectedButton = event.currentTarget;
+  activeModality = selectedButton.dataset.modality;
+
+  for (const button of modalityButtons) {
+    button.classList.remove("is-active");
+  }
+  selectedButton.classList.add("is-active");
+  filterProtocols();
 }
 
 // Erstellt für jedes Protokoll eine Karte in der Übersicht.
@@ -62,7 +74,7 @@ function renderProtocols(protocols) {
     protocolList.appendChild(createProtocolCard(protocol));
   }
 
-  if (protocolSearch.value.trim() === "") {
+  if (protocolSearch.value.trim() === "" && activeModality === "Alle") {
     loadStatus.textContent = `${protocols.length} Untersuchungsprotokolle geladen.`;
   } else {
     loadStatus.textContent = `${protocols.length} von ${allProtocols.length} Untersuchungsprotokollen gefunden.`;
@@ -160,5 +172,8 @@ function createCaveSection(caveHints) {
   return section;
 }
 
-protocolSearch.addEventListener("input", searchProtocols);
+protocolSearch.addEventListener("input", filterProtocols);
+for (const button of modalityButtons) {
+  button.addEventListener("click", selectModality);
+}
 loadProtocols();
