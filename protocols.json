@@ -5,9 +5,9 @@
     "modalitaet": "Röntgen",
     "region": "Thorax",
     "parameter": {
-      "kv": "115-125 kV",
-      "mas": "ca. 1,0-5,0 mAs (AEC)",
-      "fda": "150-200 cm"
+      "kv": "115–125 kV",
+      "mas": "ca. 1,0–5,0 mAs (AEC)",
+      "fda": "150–200 cm"
     },
     "lagerung": "Stehend am Rasterwandstativ, Brust vorne am Detektor, Hände in die Hüften und Ellenbogen nach vorne ziehen, tiefe Inspiration.",
     "cave": [
@@ -22,11 +22,11 @@
     "modalitaet": "Röntgen",
     "region": "Obere Extremität",
     "parameter": {
-      "kv": "60-70 kV",
-      "mas": "ca. 10-18 mAs (AEC)",
-      "fda": "100-115 cm"
+      "kv": "60–70 kV",
+      "mas": "ca. 10–18 mAs (AEC)",
+      "fda": "100–115 cm"
     },
-    "lagerung": "Stehend oder sitzend am Rasterwandstativ, leichte Aufdrehung der betroffenen Seite (ca. 5-10°), Arm je nach Fragestellung in Neutral-, Innen- oder Außenrotation.",
+    "lagerung": "Stehend oder sitzend am Rasterwandstativ, leichte Aufdrehung der betroffenen Seite (ca. 5–10°), Arm je nach Fragestellung in Neutral-, Innen- oder Außenrotation.",
     "cave": [
       "Rotationsstellung genau an Fragestellung anpassen (Daumen außen/vorne vs. innen).",
       "Zu starke Drehung verfälscht den Gelenkspalt.",
@@ -39,13 +39,13 @@
     "modalitaet": "Röntgen",
     "region": "Obere Extremität",
     "parameter": {
-      "kv": "65-75 kV",
-      "mas": "ca. 12-18 mAs (AEC)",
+      "kv": "65–75 kV",
+      "mas": "ca. 12–18 mAs (AEC)",
       "fda": "115 cm"
     },
-    "lagerung": "Stehend am Rasterwandstativ, betroffene Schulter am Detektor, gesunde Seite ca. 45-60° vom Stativ wegdrehen, bis die Skapula orthograd getroffen wird; Röhre ca. 15-20° craniocaudal geneigt.",
+    "lagerung": "Stehend am Rasterwandstativ, betroffene Schulter am Detektor, gesunde Seite ca. 45–60° vom Stativ wegdrehen, bis die Skapula orthograd getroffen wird; Röhre ca. 15–20° craniocaudal geneigt.",
     "cave": [
-      "Röhre ca. 15-20° craniocaudal neigen, um das Akromion frei zu projizieren.",
+      "Röhre ca. 15–20° craniocaudal neigen, um das Akromion frei zu projizieren.",
       "Korrekte Rotation beachten (Y-Figur aus Korakoid, Spina scapulae und Skapulablatt).",
       "Überlagerung durch die Rippen vermeiden."
     ]
@@ -56,8 +56,8 @@
     "modalitaet": "Röntgen",
     "region": "Untere Extremität",
     "parameter": {
-      "kv": "60-65 kV",
-      "mas": "ca. 4-6 mAs (AEC)",
+      "kv": "60–65 kV",
+      "mas": "ca. 4–6 mAs (AEC)",
       "fda": "115 cm"
     },
     "lagerung": "Liegend in Rückenlage (oder stehend unter Belastung je nach Fragestellung), Bein gestreckt, Patella zentriert nach vorne ausgerichtet, Zentralstrahl auf den Gelenkspalt (unterhalb der Patellaspitze).",
@@ -73,11 +73,11 @@
     "modalitaet": "Röntgen",
     "region": "Untere Extremität",
     "parameter": {
-      "kv": "60-65 kV",
-      "mas": "ca. 4-6 mAs (AEC)",
+      "kv": "60–65 kV",
+      "mas": "ca. 4–6 mAs (AEC)",
       "fda": "115 cm"
     },
-    "lagerung": "Seitenlage auf der betroffenen Seite, Kniegelenk ca. 20-30° gebeugt, kontralaterales Bein nach vorne oder hinten auslagern, Ferse ggf. leicht unterpolstern.",
+    "lagerung": "Seitenlage auf der betroffenen Seite, Kniegelenk ca. 20–30° gebeugt, kontralaterales Bein nach vorne oder hinten auslagern, Ferse ggf. leicht unterpolstern.",
     "cave": [
       "Femurkondylen müssen exakt deckungsgleich projiziert sein.",
       "Retropatellarer Gelenkspalt frei einsehbar darstellen.",
@@ -90,11 +90,11 @@
     "modalitaet": "Röntgen",
     "region": "Untere Extremität",
     "parameter": {
-      "kv": "60-65 kV",
-      "mas": "ca. 5-8 mAs (frei)",
+      "kv": "60–65 kV",
+      "mas": "ca. 5–8 mAs (frei)",
       "fda": "115 cm"
     },
-    "lagerung": "Rückenlage mit angewinkeltem Kniegelenk (ca. 30-45° Beugung über Lagerungskissen), Detektor proximal oberhalb der Patella positioniert, Zentralstrahl tangential durch das Femoropatellargelenk.",
+    "lagerung": "Rückenlage mit angewinkeltem Kniegelenk (ca. 30–45° Beugung über Lagerungskissen), Detektor proximal oberhalb der Patella positioniert, Zentralstrahl tangential durch das Femoropatellargelenk.",
     "cave": [
       "Bei bekannter oder dringend vermuteter Patella-Querfraktur hinterfragen, ob Aufnahme notwendig ist (Dislokationsgefahr durch Beugung!).",
       "Beine entspannt und ohne Außen-/Innenrotation lagern.",
@@ -107,11 +107,11 @@
     "modalitaet": "Röntgen",
     "region": "Abdomen",
     "parameter": {
-      "kv": "75-85 kV",
-      "mas": "ca. 15-30 mAs (AEC)",
+      "kv": "75–85 kV",
+      "mas": "ca. 15–30 mAs (AEC)",
       "fda": "115 cm"
     },
-    "lagerung": "Stabile Linksseitenlage auf der Liege vor dem Rasterwandstativ (nach ca. 5-10 Minuten Vorlagerung), horizontaler Strahlengang in Exspiration.",
+    "lagerung": "Stabile Linksseitenlage auf der Liege vor dem Rasterwandstativ (nach ca. 5–10 Minuten Vorlagerung), horizontaler Strahlengang in Exspiration.",
     "cave": [
       "Rechte Flanke und Zwerchfellkuppel vollständig abbilden (Nachweis freier Luft).",
       "Mindestens 5 Minuten vorher in Linksseitenlage lagern, damit freie Luft aufsteigen kann.",
@@ -124,9 +124,10 @@
     "modalitaet": "CT",
     "region": "Thorax",
     "parameter": {
-      "kv": "100-120 kV",
-      "mas": "CareDose / AEC (Ref. ~90-120 mAs)",
-      "fda": "Isozentrum (Gantry)"
+      "roehrenspannung": "100–120 kV (Care kV)",
+      "roehrenstrom": "CareDose4D / AEC (Ref. ~90–120 mAs)",
+      "schichtdicke": "1,0 mm / 3,0 mm (Lungen- & Weichteilfenster)",
+      "kontrastmittel": "Optional 60–80 ml KM i.v. (Flow 3,0 ml/s, Delay ~30–35 s)"
     },
     "lagerung": "Rückenlage, Head-First, Arme über dem Kopf gelagert, Scanbereich von Lungenspitze bis Nebennieren in tiefer Inspiration.",
     "cave": [
@@ -141,9 +142,10 @@
     "modalitaet": "MRT",
     "region": "Untere Extremität",
     "parameter": {
-      "kv": "1,5 T / 3,0 T",
-      "mas": "Dedizierte Kniespule (Tx/Rx)",
-      "fda": "Isozentrum Magnet",
+      "feldstaerke": "1,5 T / 3,0 T",
+      "spule": "Dedizierte Kniespule (Tx/Rx)",
+      "schichtdicke": "3,0 mm (Gap 10 %)",
+      "kontrastmittel": "Nativ (KM nur bei Tumor / Arthritis)",
       "sequenzen": [
         "Localizer (3 Ebenen)",
         "PD TSE fs sag (Menisken, Kreuzbänder, Knorpel)",
@@ -153,7 +155,7 @@
         "Optional: PD TSE sag dünnschichtig anguliert auf VKB"
       ]
     },
-    "lagerung": "Rückenlage, Feet-First, zu untersuchendes Knie mittig in der Kniespule, leichte Außenrotation (ca. 10-15°) für optimale Darstellung des vorderen Kreuzbandes.",
+    "lagerung": "Rückenlage, Feet-First, zu untersuchendes Knie mittig in der Kniespule, leichte Außenrotation (ca. 10–15°) für optimale Darstellung des vorderen Kreuzbandes.",
     "cave": [
       "MRT-Kontraindikationen abklären (Herzschrittmacher, Metallsplitter, Cochlea-Implantate, Schwangerschaft).",
       "Gehörschutz anlegen und Notfallball in die Hand geben.",
@@ -166,9 +168,10 @@
     "modalitaet": "MRT",
     "region": "Obere Extremität",
     "parameter": {
-      "kv": "1,5 T / 3,0 T",
-      "mas": "Dedizierte Schulterspule",
-      "fda": "Isozentrum Magnet",
+      "feldstaerke": "1,5 T / 3,0 T",
+      "spule": "Dedizierte Schulterspule",
+      "schichtdicke": "3,0 mm (Gap 10 %)",
+      "kontrastmittel": "Nativ (oder direkte MR-Arthrographie bei Labrumläsion)",
       "sequenzen": [
         "Localizer (3 Ebenen)",
         "PD TSE fs tra (Labrum glenoidale, Bizepssehne im Sulcus)",
@@ -191,9 +194,10 @@
     "modalitaet": "MRT",
     "region": "Wirbelsäule",
     "parameter": {
-      "kv": "1,5 T / 3,0 T",
-      "mas": "Spine-Matrix-Spule (posterior)",
-      "fda": "Isozentrum Magnet",
+      "feldstaerke": "1,5 T / 3,0 T",
+      "spule": "Spine-Matrix-Spule (posterior)",
+      "schichtdicke": "3,0–4,0 mm (sag) / 3,0 mm (tra)",
+      "kontrastmittel": "Nativ (KM bei Vor-OP / Spondylodiszitis / Tumor)",
       "sequenzen": [
         "Localizer (inkl. Übersicht gesamte WS zur Höhenlokalisation)",
         "T2 TSE sag (Bandscheiben, Spinalkanal, Myelon/Conus)",
@@ -216,9 +220,10 @@
     "modalitaet": "MRT",
     "region": "Kopf",
     "parameter": {
-      "kv": "1,5 T / 3,0 T",
-      "mas": "Kopfspule (Head/Neck 20–64 Kanal)",
-      "fda": "Isozentrum Magnet",
+      "feldstaerke": "1,5 T / 3,0 T",
+      "spule": "Kopfspule (Head/Neck 20–64 Kanal)",
+      "schichtdicke": "4,0–5,0 mm (2D) / 1,0 mm (3D MPRAGE)",
+      "kontrastmittel": "Nativ (KM nach Fragestellung, z. B. Tumor/MS/Entzündung)",
       "sequenzen": [
         "Localizer (3 Ebenen)",
         "T2 TSE tra (Hirnparenchym, Liquorräume)",

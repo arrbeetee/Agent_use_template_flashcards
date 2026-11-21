@@ -9,6 +9,7 @@
 - **F6 – Filter kombinieren:** Suche, Modalitäts- und Körperregionsfilter wirken gleichzeitig. Das Akzeptanzbeispiel mit `Röntgen`, `Untere Extremität` und `lateral` zeigt nur „Kniegelenk lateral“; im Browser geprüft.
 - **F7 – Leere Ergebnisse zurücksetzen:** Bei null Treffern erscheint die hervorgehobene Meldung „Keine passenden Protokolle gefunden.“ und der Button „Alle Filter zurücksetzen“. Der Button leert die Suche, setzt beide Filter auf `Alle` und zeigt wieder alle Protokolle.
 - **Ergänzung – MRT-Sequenzen:** Vorhandene Sequenzlisten aus `protocols.json` werden auf den MRT-Karten angezeigt.
+- **Ergänzung – Vergleichsauswahl:** Protokollkarten lassen sich für den Vergleich auswählen. Bis zu drei Karten werden dauerhaft im Browser gespeichert, unabhängig von aktiven Filtern angezeigt und über „Auswahl zurücksetzen“ gelöscht.
 
 ## Decisions & notes
 - Die Seite muss über einen lokalen Server geöffnet werden, damit `fetch` `protocols.json` laden kann.

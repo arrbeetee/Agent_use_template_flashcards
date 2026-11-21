@@ -42,6 +42,21 @@
         </fieldset>
       </aside>
       <div class="protocol-results">
+        <section
+          id="comparison-section"
+          class="comparison-panel"
+          aria-labelledby="comparison-heading"
+          hidden
+        >
+          <div class="comparison-panel-header">
+            <h2 id="comparison-heading">Zum Vergleich gespeichert</h2>
+            <button id="clear-comparison" class="comparison-reset-button" type="button" hidden>
+              Auswahl zurücksetzen
+            </button>
+          </div>
+          <p id="comparison-status" role="status" aria-live="polite"></p>
+          <div id="comparison-list" class="protocol-grid"></div>
+        </section>
         <p id="load-status" class="load-status" role="status" aria-live="polite">
           Protokolle werden geladen …
         </p>

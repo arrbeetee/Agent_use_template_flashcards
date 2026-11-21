@@ -13,6 +13,8 @@ F5. Filter-Buttons für die **Körperregion** hinzufügen (`Alle`, `Thorax`, `Ab
 F6. Suchfeld und beide Filter (Modalität + Körperregion) so kombinieren, dass alle aktiven Bedingungen gleichzeitig angewendet werden.
 F7. Eine deutliche Hinweismeldung („Keine passenden Protokolle gefunden.“) anzeigen, wenn kein Protokoll zu den aktuellen Such- oder Filtereinstellungen passt, sowie einen Button zum Zurücksetzen aller Filter.
 
+E1. MRT Prtokolle / json Datei aktualisiert.
+
 ## Acceptance criteria (how I know a feature works)
 F1 & F2: Nach dem Öffnen der Seite über einen lokalen Server (z. B. VS Code Live Server) sind alle 9 Protokolle aus `protocols.json` als strukturierte Karten sichtbar.
 F3: Wenn ich „Schulter“ in das Suchfeld eintippe, werden sofort nur noch „Schulter a.p.“ und „Schulter Outlet View“ angezeigt.
