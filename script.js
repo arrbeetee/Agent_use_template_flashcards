@@ -31,19 +31,95 @@ function renderProtocols(protocols) {
   loadStatus.textContent = `${protocols.length} Untersuchungsprotokolle geladen.`;
 }
 
-// Erstellt eine Karte mit dem Namen, der Modalität und der Körperregion.
+// Erstellt eine Karte mit allen Angaben eines Untersuchungsprotokolls.
 function createProtocolCard(protocol) {
   const card = document.createElement("article");
   const title = document.createElement("h2");
   const details = document.createElement("p");
+  const parameterSection = createParameterSection(protocol.parameter);
+  const positioningSection = createTextSection(
+    "Lagerung / Einstelltechnik",
+    protocol.lagerung
+  );
+  const caveSection = createCaveSection(protocol.cave);
 
   card.classList.add("protocol-card");
   title.textContent = protocol.untersuchung;
   details.textContent = `${protocol.modalitaet} · ${protocol.region}`;
   details.classList.add("protocol-details");
-  card.append(title, details);
+  card.append(title, details, parameterSection, positioningSection, caveSection);
 
   return card;
+}
+
+// Erstellt den Abschnitt mit kV, mAs und FDA.
+function createParameterSection(parameter) {
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  const list = document.createElement("dl");
+
+  section.classList.add("protocol-section");
+  heading.textContent = "Aufnahmeparameter";
+  list.classList.add("parameter-list");
+  list.append(
+    createParameterItem("kV", parameter.kv),
+    createParameterItem("mAs", parameter.mas),
+    createParameterItem("FDA", parameter.fda)
+  );
+  section.append(heading, list);
+
+  return section;
+}
+
+// Erstellt einen Parameter-Eintrag für die Aufnahmeparameterliste.
+function createParameterItem(label, value) {
+  const term = document.createElement("dt");
+  const description = document.createElement("dd");
+
+  term.textContent = label;
+  description.textContent = value;
+
+  return createDescriptionPair(term, description);
+}
+
+// Fügt einen Begriff und seine Beschreibung als gemeinsamen Listeneintrag hinzu.
+function createDescriptionPair(term, description) {
+  const wrapper = document.createElement("div");
+  wrapper.append(term, description);
+  return wrapper;
+}
+
+// Erstellt einen Textabschnitt für Lagerung oder Einstelltechnik.
+function createTextSection(headingText, text) {
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  const paragraph = document.createElement("p");
+
+  section.classList.add("protocol-section");
+  heading.textContent = headingText;
+  paragraph.textContent = text;
+  section.append(heading, paragraph);
+
+  return section;
+}
+
+// Erstellt den hervorgehobenen Abschnitt mit allen CAVE-Hinweisen.
+function createCaveSection(caveHints) {
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  const list = document.createElement("ul");
+
+  section.classList.add("cave-section");
+  heading.textContent = "CAVE";
+
+  for (const hint of caveHints) {
+    const item = document.createElement("li");
+    item.textContent = hint;
+    list.appendChild(item);
+  }
+
+  section.append(heading, list);
+  return section;
 }
 
 loadProtocols();

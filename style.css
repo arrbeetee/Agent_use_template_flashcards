@@ -80,3 +80,67 @@ body {
   color: #52666e;
   font-size: 0.95rem;
 }
+
+.protocol-section {
+  margin-top: 18px;
+}
+
+.protocol-section h3,
+.cave-section h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.protocol-section p {
+  margin: 0;
+  color: #40545c;
+  line-height: 1.45;
+}
+
+.parameter-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.parameter-list div {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 5px;
+  background: #eff4f5;
+}
+
+.parameter-list dt {
+  font-weight: 700;
+  color: #176b73;
+}
+
+.parameter-list dd {
+  margin: 0;
+  color: #40545c;
+}
+
+.cave-section {
+  margin-top: 18px;
+  padding: 12px;
+  border-left: 4px solid #d69e2e;
+  border-radius: 6px;
+  background: #fff8df;
+}
+
+.cave-section h3 {
+  color: #805b12;
+}
+
+.cave-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #5f4a1c;
+  line-height: 1.4;
+}
+
+.cave-section li + li {
+  margin-top: 6px;
+}
