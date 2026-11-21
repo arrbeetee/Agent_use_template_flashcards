@@ -1,6 +1,7 @@
 const protocolList = document.getElementById("protocol-list");
 const loadStatus = document.getElementById("load-status");
 const protocolSearch = document.getElementById("protocol-search");
+const resetFiltersButton = document.getElementById("reset-filters");
 const modalityButtons = document.querySelectorAll("[data-modality]");
 const regionButtons = document.querySelectorAll("[data-region]");
 let allProtocols = [];
@@ -84,6 +85,22 @@ function selectRegion(event) {
   filterProtocols();
 }
 
+// Setzt Suche und beide Filter zurück und zeigt alle Protokolle.
+function resetFilters() {
+  protocolSearch.value = "";
+  activeModality = "Alle";
+  activeRegion = "Alle";
+
+  for (const button of modalityButtons) {
+    button.classList.toggle("is-active", button.dataset.modality === "Alle");
+  }
+  for (const button of regionButtons) {
+    button.classList.toggle("is-active", button.dataset.region === "Alle");
+  }
+
+  filterProtocols();
+}
+
 // Erstellt für jedes Protokoll eine Karte in der Übersicht.
 function renderProtocols(protocols) {
   protocolList.replaceChildren();
@@ -91,6 +108,16 @@ function renderProtocols(protocols) {
   for (const protocol of protocols) {
     protocolList.appendChild(createProtocolCard(protocol));
   }
+
+  if (protocols.length === 0) {
+    loadStatus.textContent = "Keine passenden Protokolle gefunden.";
+    loadStatus.classList.add("load-status-empty");
+    resetFiltersButton.hidden = false;
+    return;
+  }
+
+  loadStatus.classList.remove("load-status-empty");
+  resetFiltersButton.hidden = true;
 
   if (protocolSearch.value.trim() === "" &&
     activeModality === "Alle" &&
@@ -193,6 +220,7 @@ function createCaveSection(caveHints) {
 }
 
 protocolSearch.addEventListener("input", filterProtocols);
+resetFiltersButton.addEventListener("click", resetFilters);
 for (const button of modalityButtons) {
   button.addEventListener("click", selectModality);
 }

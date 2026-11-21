@@ -132,6 +132,33 @@ body {
   font-weight: 700;
 }
 
+.load-status-empty {
+  padding: 16px;
+  border: 1px solid #b9dadd;
+  border-left: 5px solid #176b73;
+  border-radius: 6px;
+  color: #155e66;
+  background: #eaf4f5;
+  font-weight: 700;
+}
+
+.reset-filters-button {
+  min-height: 42px;
+  margin: -8px 0 20px;
+  padding: 8px 12px;
+  border: 1px solid #176b73;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #176b73;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reset-filters-button:hover {
+  background: #155e66;
+}
+
 .protocol-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
