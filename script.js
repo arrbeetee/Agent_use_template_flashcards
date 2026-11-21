@@ -134,6 +134,9 @@ function createProtocolCard(protocol) {
   const title = document.createElement("h2");
   const details = document.createElement("p");
   const parameterSection = createParameterSection(protocol.parameter);
+  const sequenceSection = protocol.parameter.sequenzen
+    ? createSequenceSection(protocol.parameter.sequenzen)
+    : null;
   const positioningSection = createTextSection(
     "Lagerung / Einstelltechnik",
     protocol.lagerung
@@ -145,6 +148,9 @@ function createProtocolCard(protocol) {
   details.textContent = `${protocol.modalitaet} · ${protocol.region}`;
   details.classList.add("protocol-details");
   card.append(title, details, parameterSection, positioningSection, caveSection);
+  if (sequenceSection) {
+    card.insertBefore(sequenceSection, positioningSection);
+  }
 
   return card;
 }
@@ -163,6 +169,25 @@ function createParameterSection(parameter) {
     createParameterItem("mAs", parameter.mas),
     createParameterItem("FDA", parameter.fda)
   );
+  section.append(heading, list);
+
+  return section;
+}
+
+// Erstellt die MRT-Sequenzliste, wenn sie im Protokoll vorhanden ist.
+function createSequenceSection(sequences) {
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  const list = document.createElement("ul");
+
+  section.classList.add("protocol-section");
+  list.classList.add("sequence-list");
+  heading.textContent = "MRT-Sequenzen";
+  for (const sequence of sequences) {
+    const item = document.createElement("li");
+    item.textContent = sequence;
+    list.appendChild(item);
+  }
   section.append(heading, list);
 
   return section;

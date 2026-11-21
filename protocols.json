@@ -141,15 +141,98 @@
     "modalitaet": "MRT",
     "region": "Untere Extremität",
     "parameter": {
-      "kv": "1,5 T / 3,0 T (PD fs, T1)",
-      "mas": "Dedizierte Kniespule",
-      "fda": "Isozentrum Magnet"
+      "kv": "1,5 T / 3,0 T",
+      "mas": "Dedizierte Kniespule (Tx/Rx)",
+      "fda": "Isozentrum Magnet",
+      "sequenzen": [
+        "Localizer (3 Ebenen)",
+        "PD TSE fs sag (Menisken, Kreuzbänder, Knorpel)",
+        "T1 TSE sag (Knochenmark, Frakturausschluss)",
+        "PD TSE fs cor (Kollateralbänder, Menisken)",
+        "PD TSE fs tra (Femoropatellargelenk, Retropatellarknorpel)",
+        "Optional: PD TSE sag dünnschichtig anguliert auf VKB"
+      ]
     },
     "lagerung": "Rückenlage, Feet-First, zu untersuchendes Knie mittig in der Kniespule, leichte Außenrotation (ca. 10-15°) für optimale Darstellung des vorderen Kreuzbandes.",
     "cave": [
-      "Kontraindikationen abklären (Herzschrittmacher, Metallsplitter, Cochlea-Implantate, Schwangerschaft).",
+      "MRT-Kontraindikationen abklären (Herzschrittmacher, Metallsplitter, Cochlea-Implantate, Schwangerschaft).",
       "Gehörschutz anlegen und Notfallball in die Hand geben.",
       "Knie gut abpolstern, um Bewegungsartefakte während der Sequenzen zu verhindern."
+    ]
+  },
+  {
+    "id": "mrt-schultergelenk-standard",
+    "untersuchung": "MRT Schultergelenk (Standardprotokoll)",
+    "modalitaet": "MRT",
+    "region": "Obere Extremität",
+    "parameter": {
+      "kv": "1,5 T / 3,0 T",
+      "mas": "Dedizierte Schulterspule",
+      "fda": "Isozentrum Magnet",
+      "sequenzen": [
+        "Localizer (3 Ebenen)",
+        "PD TSE fs tra (Labrum glenoidale, Bizepssehne im Sulcus)",
+        "PD TSE fs cor-obl (Supraspinatussehne, Subakromialraum)",
+        "T1 TSE cor-obl (Knochenmark, ACG, Muskelatrophie)",
+        "PD TSE fs sag-obl (Rotatorenmanschette im Querschnitt)",
+        "T2 TSE sag-obl (Muskel-Fett-Infiltration nach Goutallier)"
+      ]
+    },
+    "lagerung": "Rückenlage, Head-First, Arm in Neutral- bis leichter Außenrotation (Daumen zeigt nach oben/außen) neben dem Körper gelagert, Schulter möglichst nah an das Isozentrum rücken.",
+    "cave": [
+      "Innenrotation vermeiden, da sich sonst die Supraspinatussehne überlagert (Magic-Angle-Effekt beachten).",
+      "Coronar-oblique Schichtführung parallel zur Supraspinatussehne / Spina scapulae planen.",
+      "Bei Verdacht auf Labrumläsion ggf. direkte MR-Arthrographie (T1 fs nach intraartikulärer KM-Gabe) abklären."
+    ]
+  },
+  {
+    "id": "mrt-lws-standard",
+    "untersuchung": "MRT LWS (Lendenwirbelsäule)",
+    "modalitaet": "MRT",
+    "region": "Wirbelsäule",
+    "parameter": {
+      "kv": "1,5 T / 3,0 T",
+      "mas": "Spine-Matrix-Spule (posterior)",
+      "fda": "Isozentrum Magnet",
+      "sequenzen": [
+        "Localizer (inkl. Übersicht gesamte WS zur Höhenlokalisation)",
+        "T2 TSE sag (Bandscheiben, Spinalkanal, Myelon/Conus)",
+        "T1 TSE sag (Wirbelkörper, Knochenmark, Neuroforamina)",
+        "STIR / T2 TIRM sag (Knochenmarködem, Frakturen, Entzündung)",
+        "T2 TSE tra (anguliert auf betroffene Bandscheibenfächer L3/L4–L5/S1)",
+        "Optional bei Vor-OP / Tumor / Entzündung: T1 TSE fs sag & tra + KM"
+      ]
+    },
+    "lagerung": "Rückenlage, Head-First oder Feet-First, Beine auf einem Stufenlagerungskissen (Knie leicht gebeugt) zur Entlordosierung der LWS und Schmerzreduktion.",
+    "cave": [
+      "Übersichts-Localizer von C2 bis Os sacrum mitführen, um Übergangswirbel (Sakralisation/Lumbalisation) sicher abzuzählen.",
+      "Conus medullaris (ca. Th12/L1) vollständig im sagittalen FOV erfassen.",
+      "Vorsättigungsbalken (Saturation Band) ventral vor die Wirbelsäule legen, um Atem- und Gefäßpulsationsartefakte zu reduzieren."
+    ]
+  },
+  {
+    "id": "mrt-schaedel-standard",
+    "untersuchung": "MRT Schädel / Neurocranium (Standard)",
+    "modalitaet": "MRT",
+    "region": "Kopf",
+    "parameter": {
+      "kv": "1,5 T / 3,0 T",
+      "mas": "Kopfspule (Head/Neck 20–64 Kanal)",
+      "fda": "Isozentrum Magnet",
+      "sequenzen": [
+        "Localizer (3 Ebenen)",
+        "T2 TSE tra (Hirnparenchym, Liquorräume)",
+        "T2 FLAIR tra (periventrikuläre Läsionen, Marklager)",
+        "DWI + ADC tra (Ischämie-Früherkennung, Abszess)",
+        "T2* GRE / SWI tra (Mikroblutungen, Hämosiderin, Verkalkungen)",
+        "T1 MPRAGE / TSE sag oder tra (Anatomie, ggf. + KM bei Tumor/Entzündung)"
+      ]
+    },
+    "lagerung": "Rückenlage, Head-First, Kopf gerade und symmetrisch in der Kopfspule fixiert (Seitpolster), Kinn leicht angezogen, bicommissurale Linie (AC-PC) als Orientierung.",
+    "cave": [
+      "Metallische Haarspangen, Ohrringe, Zahnprothesen und Augen-Make-up (Suszeptibilitätsartefakte in DWI/SWI) vorab entfernen.",
+      "Transversale Schichten parallel zur AC-PC-Linie (Verbindung Commissura anterior – posterior) planen.",
+      "Bei V. a. akuten Schlaganfall DWI/ADC und TOF-MRA (intrakranielle Gefäße) priorisieren."
     ]
   }
 ]

@@ -10,6 +10,6 @@ Es kann aber etwas unübersichtlich werden und die Fragen übersehen.
 Manchmal muss man per Button bestätigen oder per Chat akzeptieren.
 
 Co pilot arbeitet mit dem geöffneten Fenster den ich selber auch sehe.
-Es erkennt aber auch wenn der live preview hängt oder Fehler aufweist und lädt es neu nach
+Es erkennt aber auch wenn der live preview hängt oder Fehler aufweist und lädt es neu nach.
 
 ### New things I did learn
