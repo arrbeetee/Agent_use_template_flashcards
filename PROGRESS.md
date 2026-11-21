@@ -5,9 +5,11 @@
 - **F2 – Protokolldetails anzeigen:** Jede Untersuchung wird als eigene Karte mit Titel, Modalität, Körperregion, Aufnahmeparametern (`kV`, `mAs`, `FDA`), Lagerung/Einstelltechnik und einer hervorgehobenen Liste mit `CAVE`-Hinweisen dargestellt.
 - **F3 – Echtzeit-Suche:** Ein Suchfeld filtert die Karten während der Eingabe nach Untersuchungsname, Lagerung und CAVE-Hinweisen. Die Suche ist unabhängig von Groß- und Kleinschreibung.
 - **F4 – Modalitätsfilter:** Die Filtergruppe enthält die Auswahlmöglichkeiten `Alle`, `Röntgen`, `CT` und `MRT`. Der aktive Button wird hervorgehoben, und die Karten werden direkt auf die gewählte Modalität begrenzt. Suche und Modalitätsfilter werden gemeinsam angewendet.
+- **F5 – Körperregionsfilter:** Eine eigene Filtergruppe enthält `Alle`, `Thorax`, `Abdomen`, `Obere Extremität` und `Untere Extremität`. Der aktive Button wird hervorgehoben; der Regionsfilter wird zusammen mit Suche und Modalitätsfilter angewendet.
+- **F6 – Filter kombinieren:** Suche, Modalitäts- und Körperregionsfilter wirken gleichzeitig. Das Akzeptanzbeispiel mit `Röntgen`, `Untere Extremität` und `lateral` zeigt nur „Kniegelenk lateral“; im Browser geprüft.
 
 ## Next
-- **F5 – Körperregionsfilter:** Filter-Buttons für Alle, Thorax, Abdomen, Obere Extremität und Untere Extremität ergänzen.
+- **F7 – Leere Ergebnisse zurücksetzen:** Hinweismeldung bei keinen Treffern und Zurücksetzen-Button ergänzen.
 
 ## Decisions & notes
 - Die Seite muss über einen lokalen Server geöffnet werden, damit `fetch` `protocols.json` laden kann.

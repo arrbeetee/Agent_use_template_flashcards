@@ -1,9 +1,11 @@
 const protocolList = document.getElementById("protocol-list");
 const loadStatus = document.getElementById("load-status");
 const protocolSearch = document.getElementById("protocol-search");
-const modalityButtons = document.querySelectorAll(".filter-button");
+const modalityButtons = document.querySelectorAll("[data-modality]");
+const regionButtons = document.querySelectorAll("[data-region]");
 let allProtocols = [];
 let activeModality = "Alle";
+let activeRegion = "Alle";
 
 // Lädt die Protokolle und zeigt einen Fehler an, falls die Datei nicht lesbar ist.
 async function loadProtocols() {
@@ -26,12 +28,16 @@ async function loadProtocols() {
   }
 }
 
-// Filtert die Protokolle nach Suchtext und aktiver Modalität.
+// Filtert die Protokolle nach Suchtext, Modalität und Körperregion.
 function filterProtocols() {
   const searchText = protocolSearch.value.trim().toLowerCase();
   const matchingProtocols = allProtocols.filter(function (protocol) {
     if (activeModality !== "Alle" &&
       protocol.modalitaet !== activeModality) {
+      return false;
+    }
+
+    if (activeRegion !== "Alle" && protocol.region !== activeRegion) {
       return false;
     }
 
@@ -66,6 +72,18 @@ function selectModality(event) {
   filterProtocols();
 }
 
+// Wechselt den aktiven Körperregionsfilter und aktualisiert die Karten.
+function selectRegion(event) {
+  const selectedButton = event.currentTarget;
+  activeRegion = selectedButton.dataset.region;
+
+  for (const button of regionButtons) {
+    button.classList.remove("is-active");
+  }
+  selectedButton.classList.add("is-active");
+  filterProtocols();
+}
+
 // Erstellt für jedes Protokoll eine Karte in der Übersicht.
 function renderProtocols(protocols) {
   protocolList.replaceChildren();
@@ -74,7 +92,9 @@ function renderProtocols(protocols) {
     protocolList.appendChild(createProtocolCard(protocol));
   }
 
-  if (protocolSearch.value.trim() === "" && activeModality === "Alle") {
+  if (protocolSearch.value.trim() === "" &&
+    activeModality === "Alle" &&
+    activeRegion === "Alle") {
     loadStatus.textContent = `${protocols.length} Untersuchungsprotokolle geladen.`;
   } else {
     loadStatus.textContent = `${protocols.length} von ${allProtocols.length} Untersuchungsprotokollen gefunden.`;
@@ -175,5 +195,8 @@ function createCaveSection(caveHints) {
 protocolSearch.addEventListener("input", filterProtocols);
 for (const button of modalityButtons) {
   button.addEventListener("click", selectModality);
+}
+for (const button of regionButtons) {
+  button.addEventListener("click", selectRegion);
 }
 loadProtocols();
